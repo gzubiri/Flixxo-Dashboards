@@ -1,0 +1,315 @@
+{
+    "widgets": [
+        {
+            "type": "text",
+            "x": 0,
+            "y": 13,
+            "width": 24,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# CloudFront\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 7,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/CloudFront", "Requests", "Region", "Global", "DistributionId", "E3QYBC2Y7A6WDS" ]
+                ],
+                "region": "us-east-1"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 10,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/CloudFront", "4xxErrorRate", "Region", "Global", "DistributionId", "E3QYBC2Y7A6WDS" ],
+                    [ ".", "5xxErrorRate", ".", ".", ".", "." ],
+                    [ ".", "TotalErrorRate", ".", ".", ".", ".", { "visible": false } ]
+                ],
+                "region": "us-east-1",
+                "period": 300,
+                "title": "Errors"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 1,
+            "width": 12,
+            "height": 6,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/CloudFront", "BytesDownloaded", "Region", "Global", "DistributionId", "E3QYBC2Y7A6WDS" ],
+                    [ ".", "BytesUploaded", ".", ".", ".", "." ]
+                ],
+                "region": "us-east-1",
+                "title": "CloudFront Data Tranfer"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 21,
+            "width": 24,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# Lambda\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 22,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Invocations", "FunctionName", "flixxo-auth-qa-RPCController", { "stat": "Sum" } ],
+                    [ "...", "flixxo-contents-qa-RPCController", { "stat": "Sum" } ],
+                    [ "...", "flixxo-mailer-qa-RPCController", { "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-qa-RPCController", { "stat": "Sum" } ],
+                    [ "...", "flixxo-wallets-qa-RPCController", { "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "RPC - Invocations",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 25,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/Lambda", "Duration", "FunctionName", "flixxo-auth-qa-RPCController" ],
+                    [ "...", "flixxo-contents-qa-RPCController" ],
+                    [ "...", "flixxo-mailer-qa-RPCController" ],
+                    [ "...", "flixxo-payments-qa-RPCController" ],
+                    [ "...", "flixxo-wallets-qa-RPCController" ]
+                ],
+                "region": "us-east-1",
+                "title": "RPC - Duration"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 28,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/Lambda", "Errors", "FunctionName", "flixxo-auth-qa-RPCController" ],
+                    [ "...", "flixxo-contents-qa-RPCController" ],
+                    [ "...", "flixxo-mailer-qa-RPCController" ],
+                    [ "...", "flixxo-payments-qa-RPCController" ],
+                    [ "...", "flixxo-wallets-qa-RPCController" ]
+                ],
+                "region": "us-east-1",
+                "title": "RPC - Errors"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 22,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/Lambda", "Invocations", "FunctionName", "flixxo-contents-qa-TaskAdsRewards" ],
+                    [ "...", "flixxo-payments-qa-TaskApplyTickets" ],
+                    [ "...", "flixxo-payments-qa-TaskProcessPendingTransactions" ]
+                ],
+                "region": "us-east-1",
+                "title": "Task - Invocations"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 25,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/Lambda", "Duration", "FunctionName", "flixxo-contents-qa-TaskAdsRewards" ],
+                    [ "...", "flixxo-payments-qa-TaskApplyTickets" ],
+                    [ "...", "flixxo-payments-qa-TaskProcessPendingTransactions" ]
+                ],
+                "region": "us-east-1",
+                "title": "Task - Duration"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 28,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/Lambda", "Errors", "FunctionName", "flixxo-contents-qa-TaskAdsRewards" ],
+                    [ "...", "flixxo-payments-qa-TaskApplyTickets" ],
+                    [ "...", "flixxo-payments-qa-TaskProcessPendingTransactions" ]
+                ],
+                "region": "us-east-1",
+                "title": "Task - Errors"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 18,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/ApiGateway", "5XXError", "ApiName", "qa-flixxo-auth" ],
+                    [ ".", "4XXError", ".", "." ],
+                    [ ".", "5XXError", ".", "qa-flixxo-contents" ],
+                    [ ".", "4XXError", ".", "." ],
+                    [ ".", "5XXError", ".", "qa-flixxo-mailer" ],
+                    [ ".", "4XXError", ".", "." ],
+                    [ ".", "5XXError", ".", "qa-flixxo-payments" ],
+                    [ ".", "4XXError", ".", "." ],
+                    [ ".", "5XXError", ".", "qa-flixxo-serverless" ],
+                    [ ".", "4XXError", ".", "." ],
+                    [ ".", "5XXError", ".", "qa-flixxo-wallets" ],
+                    [ ".", "4XXError", ".", "." ]
+                ],
+                "region": "us-east-1"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 15,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/ApiGateway", "Count", "ApiName", "qa-flixxo-auth" ],
+                    [ "...", "qa-flixxo-contents" ],
+                    [ "...", "qa-flixxo-mailer" ],
+                    [ "...", "qa-flixxo-payments" ],
+                    [ "...", "qa-flixxo-serverless" ],
+                    [ "...", "qa-flixxo-wallets" ]
+                ],
+                "region": "us-east-1"
+            }
+        },
+        {
+            "type": "text",
+            "x": 12,
+            "y": 14,
+            "width": 12,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# API Gateway\n"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 14,
+            "width": 12,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# RDS Postgress\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 15,
+            "width": 12,
+            "height": 6,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/RDS", "DatabaseConnections", "DBInstanceIdentifier", "qa-flixxo" ]
+                ],
+                "region": "us-east-1"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 0,
+            "width": 24,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# CloudFront & SeedBox\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 7,
+            "width": 12,
+            "height": 6,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/EC2", "NetworkIn", "InstanceId", "i-0a77b6545e890b87f" ],
+                    [ "...", "i-05cdbce5b8b27e0e2", { "visible": false } ]
+                ],
+                "region": "us-east-1",
+                "title": "SeedBox Network In"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 1,
+            "width": 12,
+            "height": 6,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/EC2", "NetworkOut", "InstanceId", "i-0a77b6545e890b87f" ],
+                    [ "...", "i-05cdbce5b8b27e0e2", { "visible": false } ]
+                ],
+                "region": "us-east-1",
+                "title": "SeedBox Network Out"
+            }
+        }
+    ]
+}

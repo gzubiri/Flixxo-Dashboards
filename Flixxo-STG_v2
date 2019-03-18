@@ -1,0 +1,392 @@
+{
+    "widgets": [
+        {
+            "type": "text",
+            "x": 0,
+            "y": 4,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# CloudFront\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 8,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/CloudFront", "Requests", "Region", "Global", "DistributionId", "E1DU5LLBWC7QP4", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "period": 300,
+                "title": "CloudFront - Requests (count/minute)"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 11,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/CloudFront", "4xxErrorRate", "Region", "Global", "DistributionId", "E1DU5LLBWC7QP4", { "period": 60, "stat": "Average", "color": "#dbdb8d" } ],
+                    [ ".", "5xxErrorRate", ".", ".", ".", ".", { "period": 60, "stat": "Average" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "period": 300,
+                "title": "CloudFront - Errors (%)"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 5,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/CloudFront", "BytesDownloaded", "Region", "Global", "DistributionId", "E1DU5LLBWC7QP4", { "period": 60, "stat": "Sum", "color": "#2ca02c" } ],
+                    [ ".", "BytesUploaded", ".", ".", ".", ".", { "period": 60, "stat": "Sum", "color": "#9467bd" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "CloudFront - Data Tranfer (Mb/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 46,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# Lambda Tasks\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 37,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Invocations", "FunctionName", "flixxo-auth-stg-RPCController", { "stat": "Sum", "period": 60 } ],
+                    [ "...", "flixxo-contents-stg-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-mailer-stg-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-stg-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-wallets-stg-RPCController", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Lambda RPC - Invocations (count/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 43,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Duration", "FunctionName", "flixxo-auth-stg-RPCController", { "period": 60, "stat": "Average" } ],
+                    [ "...", "flixxo-contents-stg-RPCController", { "period": 60, "stat": "Average" } ],
+                    [ "...", "flixxo-mailer-stg-RPCController", { "period": 60, "stat": "Average" } ],
+                    [ "...", "flixxo-payments-stg-RPCController", { "period": 60, "stat": "Average" } ],
+                    [ "...", "flixxo-wallets-stg-RPCController", { "period": 60, "stat": "Average" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Lambda RPC - Duration (milliseconds minute average)",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 40,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Errors", "FunctionName", "flixxo-auth-stg-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-contents-stg-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-mailer-stg-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-stg-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-wallets-stg-RPCController", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Lambda RPC - Errors (count/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 47,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Invocations", "FunctionName", "flixxo-contents-stg-TaskAdsRewards", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-stg-TaskApplyTickets", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-stg-TaskProcessPendingTransactions", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Lambda Task - Invocations (count/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 53,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Duration", "FunctionName", "flixxo-contents-stg-TaskAdsRewards", { "period": 60, "stat": "Average" } ],
+                    [ "...", "flixxo-payments-stg-TaskApplyTickets", { "period": 60, "stat": "Average" } ],
+                    [ "...", "flixxo-payments-stg-TaskProcessPendingTransactions", { "period": 60, "stat": "Average" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Lambda Task - Duration (milliseconds minute average)",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 50,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Errors", "FunctionName", "flixxo-contents-stg-TaskAdsRewards", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-stg-TaskApplyTickets", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-stg-TaskProcessPendingTransactions", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Lambda Task - Errors (count/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 33,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/ApiGateway", "5XXError", "ApiName", "stg-flixxo-auth", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "stg-flixxo-contents", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "stg-flixxo-mailer", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "stg-flixxo-payments", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "stg-flixxo-serverless", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "stg-flixxo-wallets", { "period": 60, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "period": 300,
+                "title": "API Gateway - Errors (count/minute)"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 30,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/ApiGateway", "Count", "ApiName", "stg-flixxo-auth", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "stg-flixxo-contents", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "stg-flixxo-mailer", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "stg-flixxo-payments", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "stg-flixxo-serverless", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "stg-flixxo-wallets", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "API Gateway - Requests (count/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 29,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# API Gateway\n"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 25,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# RDS Postgress\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 26,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "view": "timeSeries",
+                "stacked": false,
+                "metrics": [
+                    [ "AWS/RDS", "DatabaseConnections", "DBInstanceIdentifier", "stg-flixxo" ]
+                ],
+                "region": "us-east-1"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 0,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# SeedBox\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 1,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/EC2", "NetworkOut", "InstanceId", "i-0e1ade7727b8851eb", { "period": 60, "stat": "Sum", "color": "#2ca02c" } ],
+                    [ ".", "NetworkIn", ".", ".", { "period": 60, "stat": "Sum", "color": "#9467bd" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "SeedBox - Data Transfer (Mb/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 18,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/ApplicationELB", "HTTPCode_Target_5XX_Count", "LoadBalancer", "app/stg/91470ac67fce528a", { "period": 60, "stat": "Sum", "color": "#d62728" } ],
+                    [ ".", "HTTPCode_ELB_5XX_Count", ".", ".", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "Application ELB - Errors (count/minute)",
+                "period": 300
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 14,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# Application ELB\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 15,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/ApplicationELB", "RequestCount", "LoadBalancer", "app/stg/91470ac67fce528a", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "period": 300,
+                "title": "Application ELB - Requests (count/minute)"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 21,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# ECS\n"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 36,
+            "width": 9,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# Lambda RPC\n"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 22,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/ECS", "CPUUtilization", "ServiceName", "flixxo-api", "ClusterName", "stg", { "period": 60, "stat": "Average", "color": "#bcbd22" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "ECS - CPUUtilization (average/minute)",
+                "period": 300
+            }
+        }
+    ]
+}

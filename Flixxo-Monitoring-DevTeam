@@ -1,0 +1,94 @@
+{
+    "widgets": [
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 0,
+            "width": 24,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/EC2", "CPUUtilization", "AutoScalingGroupName", "pro-ec2-seedbox", { "color": "#d62728" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "yAxis": {
+                    "left": {
+                        "min": 0,
+                        "showUnits": true
+                    }
+                },
+                "title": "Seedbox CPU Utilization",
+                "period": 300
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 3,
+            "width": 24,
+            "height": 6,
+            "properties": {
+                "metrics": [
+                    [ "AWS/RDS", "DatabaseConnections", "DBInstanceIdentifier", "pro-flixxo", { "stat": "Sum", "period": 60 } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "period": 300,
+                "yAxis": {
+                    "left": {
+                        "label": "",
+                        "min": 0
+                    }
+                },
+                "title": "Database conections"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 9,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/ApiGateway", "Count", "ApiName", "pro-flixxo-auth", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "pro-flixxo-contents", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "pro-flixxo-mailer", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "pro-flixxo-payments", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "pro-flixxo-wallets", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "pro-flixxo-search", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "period": 300,
+                "title": "API Gateway"
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 9,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/Lambda", "Invocations", "FunctionName", "flixxo-auth-pro-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-contents-pro-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-mailer-pro-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-payments-pro-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-wallets-pro-RPCController", { "period": 60, "stat": "Sum" } ],
+                    [ "...", "flixxo-search-pro-searchAllContents", { "period": 60, "stat": "Sum" } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "RPC - Invocations",
+                "period": 300
+            }
+        }
+    ]
+}
