@@ -13,90 +13,107 @@
         {
             "type": "metric",
             "x": 12,
-            "y": 7,
+            "y": 14,
             "width": 12,
             "height": 3,
             "properties": {
+                "metrics": [
+                    [ "AWS/CloudFront", "Requests", "Region", "Global", "DistributionId", "E8I0UJMFDI658", { "stat": "Sum", "period": 60 } ]
+                ],
                 "view": "timeSeries",
                 "stacked": false,
-                "metrics": [
-                    [ "AWS/CloudFront", "Requests", "Region", "Global", "DistributionId", "E8I0UJMFDI658" ]
-                ],
-                "region": "us-east-1"
-            }
-        },
-        {
-            "type": "metric",
-            "x": 12,
-            "y": 10,
-            "width": 12,
-            "height": 3,
-            "properties": {
-                "view": "timeSeries",
-                "stacked": false,
-                "metrics": [
-                    [ "AWS/CloudFront", "4xxErrorRate", "Region", "Global", "DistributionId", "E8I0UJMFDI658" ],
-                    [ ".", "5xxErrorRate", ".", ".", ".", "." ],
-                    [ ".", "TotalErrorRate", ".", ".", ".", ".", { "visible": false } ]
-                ],
                 "region": "us-east-1",
                 "period": 300,
-                "title": "Errors"
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                }
             }
         },
         {
             "type": "metric",
             "x": 12,
-            "y": 1,
+            "y": 17,
+            "width": 12,
+            "height": 3,
+            "properties": {
+                "metrics": [
+                    [ "AWS/CloudFront", "4xxErrorRate", "Region", "Global", "DistributionId", "E8I0UJMFDI658", { "period": 60 } ],
+                    [ ".", "5xxErrorRate", ".", ".", ".", ".", { "period": 60 } ],
+                    [ ".", "TotalErrorRate", ".", ".", ".", ".", { "visible": false, "period": 60 } ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "period": 300,
+                "title": "Errors",
+                "yAxis": {
+                    "left": {
+                        "max": 100
+                    }
+                }
+            }
+        },
+        {
+            "type": "metric",
+            "x": 0,
+            "y": 14,
             "width": 12,
             "height": 6,
             "properties": {
+                "metrics": [
+                    [ "AWS/CloudFront", "BytesDownloaded", "Region", "Global", "DistributionId", "E8I0UJMFDI658", { "period": 60, "stat": "Average" } ],
+                    [ ".", "BytesUploaded", ".", ".", ".", ".", { "period": 60, "stat": "Average" } ]
+                ],
                 "view": "timeSeries",
                 "stacked": false,
-                "metrics": [
-                    [ "AWS/CloudFront", "BytesDownloaded", "Region", "Global", "DistributionId", "E8I0UJMFDI658" ],
-                    [ ".", "BytesUploaded", ".", ".", ".", "." ]
-                ],
                 "region": "us-east-1",
-                "title": "CloudFront Data Tranfer"
+                "title": "Data Transfer",
+                "period": 300
             }
         },
         {
             "type": "text",
-            "x": 0,
-            "y": 21,
-            "width": 24,
+            "x": 12,
+            "y": 27,
+            "width": 12,
             "height": 1,
             "properties": {
-                "markdown": "\n# Lambda\n"
+                "markdown": "\n# Lambdas RPC\n"
             }
         },
         {
             "type": "metric",
-            "x": 0,
-            "y": 22,
+            "x": 12,
+            "y": 28,
             "width": 12,
             "height": 3,
             "properties": {
                 "metrics": [
-                    [ "AWS/Lambda", "Invocations", "FunctionName", "flixxo-auth-dev-RPCController", { "stat": "Sum" } ],
-                    [ "...", "flixxo-contents-dev-RPCController", { "stat": "Sum" } ],
-                    [ "...", "flixxo-mailer-dev-RPCController", { "stat": "Sum" } ],
-                    [ "...", "flixxo-payments-dev-RPCController", { "stat": "Sum" } ],
-                    [ "...", "flixxo-stats-dev-RPCController", { "stat": "Sum" } ],
-                    [ "...", "flixxo-wallets-dev-RPCController", { "stat": "Sum" } ]
+                    [ "AWS/Lambda", "Invocations", "FunctionName", "flixxo-auth-dev-RPCController", { "stat": "Sum", "period": 60 } ],
+                    [ "...", "flixxo-contents-dev-RPCController", { "stat": "Sum", "period": 60 } ],
+                    [ "...", "flixxo-mailer-dev-RPCController", { "stat": "Sum", "period": 60 } ],
+                    [ "...", "flixxo-payments-dev-RPCController", { "stat": "Sum", "period": 60 } ],
+                    [ "...", "flixxo-stats-dev-RPCController", { "stat": "Sum", "period": 60 } ],
+                    [ "...", "flixxo-wallets-dev-RPCController", { "stat": "Sum", "period": 60 } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
                 "region": "us-east-1",
                 "title": "RPC - Invocations",
-                "period": 300
+                "period": 300,
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                }
             }
         },
         {
             "type": "metric",
-            "x": 0,
-            "y": 25,
+            "x": 12,
+            "y": 31,
             "width": 12,
             "height": 3,
             "properties": {
@@ -112,13 +129,18 @@
                 "stacked": false,
                 "region": "us-east-1",
                 "title": "RPC - Duration",
-                "period": 300
+                "period": 300,
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                }
             }
         },
         {
             "type": "metric",
-            "x": 0,
-            "y": 28,
+            "x": 12,
+            "y": 34,
             "width": 12,
             "height": 3,
             "properties": {
@@ -138,9 +160,9 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 22,
-            "width": 12,
+            "x": 0,
+            "y": 38,
+            "width": 24,
             "height": 3,
             "properties": {
                 "metrics": [
@@ -157,8 +179,8 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 25,
+            "x": 0,
+            "y": 41,
             "width": 12,
             "height": 3,
             "properties": {
@@ -177,7 +199,7 @@
         {
             "type": "metric",
             "x": 12,
-            "y": 28,
+            "y": 41,
             "width": 12,
             "height": 3,
             "properties": {
@@ -195,10 +217,10 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 18,
+            "x": 0,
+            "y": 31,
             "width": 12,
-            "height": 3,
+            "height": 6,
             "properties": {
                 "metrics": [
                     [ "AWS/ApiGateway", "5XXError", "ApiName", "dev-flixxo-auth", "Stage", "dev", { "stat": "Sum" } ],
@@ -224,8 +246,8 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 15,
+            "x": 0,
+            "y": 28,
             "width": 12,
             "height": 3,
             "properties": {
@@ -245,8 +267,8 @@
         },
         {
             "type": "text",
-            "x": 12,
-            "y": 14,
+            "x": 0,
+            "y": 27,
             "width": 12,
             "height": 1,
             "properties": {
@@ -256,8 +278,8 @@
         {
             "type": "text",
             "x": 0,
-            "y": 14,
-            "width": 12,
+            "y": 20,
+            "width": 24,
             "height": 1,
             "properties": {
                 "markdown": "\n# RDS Postgress\n"
@@ -266,16 +288,24 @@
         {
             "type": "metric",
             "x": 0,
-            "y": 15,
-            "width": 12,
+            "y": 21,
+            "width": 24,
             "height": 6,
             "properties": {
+                "metrics": [
+                    [ "AWS/RDS", "DatabaseConnections", "DBInstanceIdentifier", "qa-flixxo", { "visible": false, "stat": "Sum", "period": 60 } ],
+                    [ "...", "dev-flixxo", { "stat": "Sum", "period": 60 } ]
+                ],
                 "view": "timeSeries",
                 "stacked": false,
-                "metrics": [
-                    [ "AWS/RDS", "DatabaseConnections", "DBInstanceIdentifier", "qa-flixxo" ]
-                ],
-                "region": "us-east-1"
+                "region": "us-east-1",
+                "period": 300,
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                },
+                "title": "Database Connections"
             }
         },
         {
@@ -285,7 +315,7 @@
             "width": 24,
             "height": 1,
             "properties": {
-                "markdown": "\n# CloudFront & SeedBox\n"
+                "markdown": "\n# SeedBox\n"
             }
         },
         {
@@ -295,31 +325,77 @@
             "width": 12,
             "height": 6,
             "properties": {
+                "metrics": [
+                    [ "AWS/EC2", "NetworkIn", "InstanceId", "i-0981c72c35b59dffa", { "visible": false } ],
+                    [ "...", "i-xxxxxxxx", { "visible": false } ],
+                    [ "...", "AutoScalingGroupName", "dev-seedbox-ec2" ]
+                ],
                 "view": "timeSeries",
                 "stacked": false,
-                "metrics": [
-                    [ "AWS/EC2", "NetworkIn", "InstanceId", "i-0981c72c35b59dffa" ],
-                    [ "...", "i-xxxxxxxx", { "visible": false } ]
-                ],
                 "region": "us-east-1",
-                "title": "SeedBox Network In"
+                "title": "SeedBox Network In",
+                "period": 300,
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "metric",
+            "x": 12,
+            "y": 7,
+            "width": 12,
+            "height": 6,
+            "properties": {
+                "metrics": [
+                    [ "AWS/EC2", "NetworkOut", "InstanceId", "i-0981c72c35b59dffa", { "visible": false } ],
+                    [ "...", "i-xxxxxxxx", { "visible": false } ],
+                    [ ".", "NetworkPacketsOut", "AutoScalingGroupName", "dev-seedbox-ec2", { "visible": false } ],
+                    [ ".", "NetworkOut", ".", "." ]
+                ],
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "us-east-1",
+                "title": "SeedBox Network Out",
+                "period": 300,
+                "yAxis": {
+                    "left": {
+                        "min": 0
+                    }
+                }
             }
         },
         {
             "type": "metric",
             "x": 0,
             "y": 1,
-            "width": 12,
+            "width": 24,
             "height": 6,
             "properties": {
                 "view": "timeSeries",
                 "stacked": false,
                 "metrics": [
-                    [ "AWS/EC2", "NetworkOut", "InstanceId", "i-0981c72c35b59dffa" ],
-                    [ "...", "i-xxxxxxxx", { "visible": false } ]
+                    [ "AWS/EC2", "CPUUtilization", "AutoScalingGroupName", "dev-seedbox-ec2" ]
                 ],
                 "region": "us-east-1",
-                "title": "SeedBox Network Out"
+                "yAxis": {
+                    "left": {
+                        "min": 0,
+                        "max": 100
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 37,
+            "width": 24,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# Lambdas Task\n"
             }
         }
     ]

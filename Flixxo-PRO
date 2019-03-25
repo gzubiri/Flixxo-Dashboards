@@ -3,7 +3,7 @@
         {
             "type": "metric",
             "x": 12,
-            "y": 8,
+            "y": 14,
             "width": 12,
             "height": 3,
             "properties": {
@@ -24,7 +24,7 @@
         {
             "type": "metric",
             "x": 12,
-            "y": 11,
+            "y": 17,
             "width": 12,
             "height": 3,
             "properties": {
@@ -42,27 +42,27 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 2,
+            "x": 0,
+            "y": 14,
             "width": 12,
             "height": 6,
             "properties": {
                 "metrics": [
-                    [ "AWS/CloudFront", "BytesDownloaded", "Region", "Global", "DistributionId", "E2RFKRNIAVTWJH", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "BytesUploaded", ".", ".", ".", ".", { "period": 60, "stat": "Sum" } ]
+                    [ "AWS/CloudFront", "BytesDownloaded", "Region", "Global", "DistributionId", "E2RFKRNIAVTWJH", { "period": 60, "stat": "Average" } ],
+                    [ ".", "BytesUploaded", ".", ".", ".", ".", { "period": 60, "stat": "Average" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
                 "region": "us-east-1",
-                "title": "CloudFront Data Transfer",
+                "title": "Data Transfer",
                 "period": 300
             }
         },
         {
             "type": "text",
-            "x": 0,
-            "y": 21,
-            "width": 24,
+            "x": 12,
+            "y": 27,
+            "width": 12,
             "height": 1,
             "properties": {
                 "markdown": "\n# Lambda\n"
@@ -70,8 +70,8 @@
         },
         {
             "type": "metric",
-            "x": 0,
-            "y": 22,
+            "x": 12,
+            "y": 28,
             "width": 12,
             "height": 3,
             "properties": {
@@ -92,8 +92,8 @@
         },
         {
             "type": "metric",
-            "x": 0,
-            "y": 25,
+            "x": 12,
+            "y": 31,
             "width": 12,
             "height": 3,
             "properties": {
@@ -114,8 +114,8 @@
         },
         {
             "type": "metric",
-            "x": 0,
-            "y": 28,
+            "x": 12,
+            "y": 34,
             "width": 12,
             "height": 3,
             "properties": {
@@ -136,9 +136,9 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 22,
-            "width": 12,
+            "x": 0,
+            "y": 38,
+            "width": 24,
             "height": 3,
             "properties": {
                 "metrics": [
@@ -158,8 +158,8 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 25,
+            "x": 0,
+            "y": 41,
             "width": 12,
             "height": 3,
             "properties": {
@@ -181,7 +181,7 @@
         {
             "type": "metric",
             "x": 12,
-            "y": 28,
+            "y": 41,
             "width": 12,
             "height": 3,
             "properties": {
@@ -202,24 +202,24 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 18,
+            "x": 0,
+            "y": 31,
             "width": 12,
-            "height": 3,
+            "height": 6,
             "properties": {
                 "metrics": [
-                    [ "AWS/ApiGateway", "5XXError", "ApiName", "pro-flixxo-auth", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "5XXError", ".", "pro-flixxo-contents", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "5XXError", ".", "pro-flixxo-mailer", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "5XXError", ".", "pro-flixxo-payments", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "5XXError", ".", "pro-flixxo-serverless", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "5XXError", ".", "pro-flixxo-wallets", { "period": 60, "stat": "Sum" } ],
-                    [ ".", "4XXError", ".", ".", { "period": 60, "stat": "Sum" } ]
+                    [ "AWS/ApiGateway", "5XXError", "ApiName", "pro-flixxo-auth", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "pro-flixxo-contents", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "pro-flixxo-mailer", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "pro-flixxo-payments", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "pro-flixxo-serverless", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "5XXError", ".", "pro-flixxo-wallets", { "period": 300, "stat": "Sum" } ],
+                    [ ".", "4XXError", ".", ".", { "period": 300, "stat": "Sum" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
@@ -234,8 +234,8 @@
         },
         {
             "type": "metric",
-            "x": 12,
-            "y": 15,
+            "x": 0,
+            "y": 28,
             "width": 12,
             "height": 3,
             "properties": {
@@ -255,8 +255,8 @@
         },
         {
             "type": "text",
-            "x": 12,
-            "y": 14,
+            "x": 0,
+            "y": 27,
             "width": 12,
             "height": 1,
             "properties": {
@@ -266,8 +266,8 @@
         {
             "type": "text",
             "x": 0,
-            "y": 14,
-            "width": 12,
+            "y": 20,
+            "width": 24,
             "height": 1,
             "properties": {
                 "markdown": "\n# RDS Postgress\n"
@@ -276,8 +276,8 @@
         {
             "type": "metric",
             "x": 0,
-            "y": 15,
-            "width": 12,
+            "y": 21,
+            "width": 24,
             "height": 6,
             "properties": {
                 "metrics": [
@@ -299,26 +299,26 @@
             "x": 0,
             "y": 0,
             "width": 24,
-            "height": 2,
+            "height": 1,
             "properties": {
-                "markdown": "\n# CloudFront & SeedBox\n\n[AWS EC2 metrics](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html)\n"
+                "markdown": "\n# Seedbox\n"
             }
         },
         {
             "type": "metric",
             "x": 0,
-            "y": 8,
+            "y": 7,
             "width": 12,
             "height": 6,
             "properties": {
                 "metrics": [
-                    [ "AWS/EC2", "NetworkIn", "InstanceId", "i-0944a862f959965db", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-0120c3506193321c6", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-064e5a6e637f8528f", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-047ba13d459eaf5ce", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-0016b8e7de6f1a06d", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-05cdbce5b8b27e0e2", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "AutoScalingGroupName", "pro-ec2-seedbox", { "period": 60, "stat": "Sum" } ]
+                    [ "AWS/EC2", "NetworkIn", "InstanceId", "i-0944a862f959965db", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-0120c3506193321c6", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-064e5a6e637f8528f", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-047ba13d459eaf5ce", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-0016b8e7de6f1a06d", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-05cdbce5b8b27e0e2", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "AutoScalingGroupName", "pro-ec2-seedbox", { "period": 300, "stat": "Average", "color": "#2ca02c" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
@@ -329,57 +329,73 @@
         },
         {
             "type": "metric",
-            "x": 0,
-            "y": 2,
+            "x": 12,
+            "y": 7,
             "width": 12,
             "height": 6,
             "properties": {
                 "metrics": [
-                    [ "AWS/EC2", "NetworkOut", "InstanceId", "i-0944a862f959965db", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-064e5a6e637f8528f", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-047ba13d459eaf5ce", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-0016b8e7de6f1a06d", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ "...", "i-05cdbce5b8b27e0e2", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ ".", "CPUUtilization", "AutoScalingGroupName", "pro-ec2-seedbox", { "period": 60, "stat": "Sum", "visible": false } ],
-                    [ ".", "NetworkOut", ".", ".", { "period": 60, "stat": "Sum" } ]
+                    [ "AWS/EC2", "NetworkOut", "InstanceId", "i-0944a862f959965db", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-064e5a6e637f8528f", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-047ba13d459eaf5ce", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-0016b8e7de6f1a06d", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ "...", "i-05cdbce5b8b27e0e2", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ ".", "CPUUtilization", "AutoScalingGroupName", "pro-ec2-seedbox", { "period": 300, "stat": "Average", "visible": false } ],
+                    [ ".", "NetworkOut", ".", ".", { "period": 300, "stat": "Average", "color": "#d62728" } ]
                 ],
                 "view": "timeSeries",
                 "stacked": false,
                 "region": "us-east-1",
                 "title": "SeedBox Network Out",
-                "period": 300
-            }
-        },
-        {
-            "type": "text",
-            "x": 0,
-            "y": 31,
-            "width": 12,
-            "height": 1,
-            "properties": {
-                "markdown": "\n# EC2\n"
+                "period": 300,
+                "yAxis": {
+                    "left": {
+                        "min": 0,
+                        "showUnits": false
+                    }
+                }
             }
         },
         {
             "type": "metric",
             "x": 0,
-            "y": 32,
-            "width": 12,
+            "y": 1,
+            "width": 24,
             "height": 6,
             "properties": {
-                "metrics": [
-                    [ "AWS/EC2", "CPUUtilization", "InstanceId", "i-0475072ef592e1cce" ]
-                ],
                 "view": "timeSeries",
                 "stacked": false,
+                "metrics": [
+                    [ "AWS/EC2", "CPUUtilization", "AutoScalingGroupName", "pro-ec2-seedbox" ]
+                ],
                 "region": "us-east-1",
-                "title": "CPUUtilization",
-                "period": 300,
                 "yAxis": {
                     "left": {
-                        "min": 0
+                        "min": 0,
+                        "showUnits": false
                     }
-                }
+                },
+                "title": "CPU Utilization"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 13,
+            "width": 24,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# CloudFront\n"
+            }
+        },
+        {
+            "type": "text",
+            "x": 0,
+            "y": 37,
+            "width": 24,
+            "height": 1,
+            "properties": {
+                "markdown": "\n# Lambdas Task\n"
             }
         }
     ]
